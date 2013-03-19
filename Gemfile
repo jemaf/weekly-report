@@ -12,6 +12,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem "pry"
+  gem "pry-nav"
+  gem "awesome_print"
+end
+
 group :development, :test do
   gem "rspec-rails"
   gem "capybara"
