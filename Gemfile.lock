@@ -29,6 +29,7 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    awesome_print (1.1.0)
     builder (3.0.4)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -39,6 +40,7 @@ GEM
       xpath (~> 1.0.0)
     childprocess (0.3.8)
       ffi (~> 1.0, >= 1.0.11)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -62,10 +64,17 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.1)
     mime-types (1.21)
     multi_json (1.6.1)
     nokogiri (1.5.6)
     polyglot (0.3.3)
+    pry (0.9.12)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-nav (0.2.3)
+      pry (~> 0.9.10)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -114,6 +123,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    slop (3.4.4)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -140,9 +150,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   capybara
   coffee-rails (~> 3.2.1)
   factory_girl
+  pry
+  pry-nav
   rails (= 3.2.12)
   rspec-rails
   sass-rails (~> 3.2.3)
