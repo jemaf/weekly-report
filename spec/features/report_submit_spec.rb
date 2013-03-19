@@ -3,7 +3,7 @@ require "spec_helper"
 describe "report" do
   context "submit successful" do
     before do
-      @report = reports(:successful)
+      @report = FactoryGirl.build(:report)
 
       visit root_path
 
@@ -22,7 +22,7 @@ describe "report" do
 
   context "submit unsucessful" do
     before do
-      @report = reports(:unsuccessful)
+      @report = FactoryGirl.build_stubbed(:report)
 
       visit root_path
 
