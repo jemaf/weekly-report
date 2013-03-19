@@ -7,7 +7,7 @@ describe "report" do
 
       visit root_path
 
-      fill_in t("form.report.name"), with: @report.name
+      fill_in t("form.name"), with: @report.name
       fill_in t("form.current_activities"), with: @report.current_activities
       fill_in t("form.next_activities"), with: @report.next_activities
 
@@ -26,7 +26,7 @@ describe "report" do
 
       visit root_path
 
-      fill_in t("form.report.name"), with: @report.name
+      fill_in t("form.name"), with: @report.name
       fill_in t("form.current_activities"), with: @report.current_activities
       fill_in t("form.next_activities"), with: @report.next_activities
 

@@ -1,0 +1,5 @@
+pt-BR:
+  form:
+    name: "Nome"
+    current_activities: "Atividades dessa semana"
+    next_activities: "Atividades da próxima semana"
