@@ -1,0 +1,15 @@
+<h1><%= t("report.index.title") %></h1>
+
+<p><%=t("report.index.step_one") %></p>
+<p><%=t("report.index.step_two") %></p>
+
+<%= simple_form_for(@report) do |form|%>
+  <%= form.input :name, label: t("form.name") %>
+  <%= form.input :current_activities, 
+    label: t("form.current_activities"),
+    hint: t("form.current_activities_tip") %>
+  <%= form.input :next_activities, 
+    label: t("form.next_activities"),
+    hint: t("form.next_activities_tip") %>
+  <%= form.submit %>
+<% end %>

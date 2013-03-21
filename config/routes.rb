@@ -1,7 +1,9 @@
 WeeklyReport::Application.routes.draw do
 
-  root :to => "report#index"
+  root :to => "reports#index"
 
-  get "report/index"
+  get "/", :to => "reports#index", :as => :reports
+  post "/", :to => "reports#create", :as => false
+
 
 end
