@@ -6,6 +6,12 @@ en:
     next_activities: "Next activities"
     next_activities_tip: "Plans for next week"
 
+  helpers:
+    submit:
+      report:
+        create: "Submit"
+
+
   errors:
     messages:
       blank: "cannot be empty"

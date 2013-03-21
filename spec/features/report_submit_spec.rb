@@ -11,7 +11,7 @@ describe "report" do
       fill_in t("form.current_activities"), with: @report.current_activities
       fill_in t("form.next_activities"), with: @report.next_activities
 
-      click_button t("form.buttons.submit")
+      click_button t("helpers.submit.report.create")
     end
 
     it "displays successful message" do
@@ -30,7 +30,7 @@ describe "report" do
       fill_in t("form.current_activities"), with: @report.current_activities
       fill_in t("form.next_activities"), with: @report.next_activities
 
-      click_button t("form.buttons.submit")
+      click_button t("helpers.submit.report.create")
     end
 
     it "displays error messages" do

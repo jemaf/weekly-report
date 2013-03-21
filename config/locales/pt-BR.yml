@@ -6,6 +6,10 @@ pt-BR:
     next_activities: "Atividades da próxima semana"
     next_activities_tip: "O que planeja-se realizar na próxima semana"
 
+  helpers:
+    submit:
+      report:
+        create: "Enviar"
   errors:
     messages:
       blank: "Não pode ficar em branco"
@@ -15,8 +19,8 @@ pt-BR:
       title: "Relatório Semanal de Atividades"
       step_one: | 
         Passo 1: Toda sexta-feira no final do dia, cada estudante deve reportar suas 
-        atividades por meio deste formulário. |
+        atividades por meio deste formulário.
       step_two: | 
         Passo 2: Toda segunda de manhã (~11:00), os relatórios de todos os estudantes 
         serão enviados "automaticamente" para todos os membros do grupo de pesquisa 
-        (inclusive para o Marco Túlio). |
+        (inclusive para o Marco Túlio).
