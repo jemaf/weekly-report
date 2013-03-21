@@ -2,8 +2,20 @@ en:
   form:
     name: "Name"
     current_activities: "Week activities"
+    current_activities_tip: "What have been done this week"
     next_activities: "Next activities"
+    next_activities_tip: "Plans for next week"
 
   errors:
     messages:
       blank: "cannot be empty"
+
+  report:
+    index:
+      title: "Weekly report"
+      step_one: |
+        Every friday, at the end of the day, each student must report 
+        your activities through this form.
+      step_two: | 
+        Every Monday, the reports of all students will be student
+        automatically to ASERG mailist.
