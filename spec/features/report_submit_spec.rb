@@ -15,14 +15,16 @@ describe "report" do
     end
 
     it "displays successful message" do
-      message = t("submit.sucessful")
+      message = t("flash.reports.create.notice")
       expect(page).to have_content(message)
     end
   end
 
   context "submit unsucessful" do
     before do
-      @report = FactoryGirl.build_stubbed(:report)
+      @report = FactoryGirl.build(:report)
+      @report.name = nil;
+      @report.current_activities = nil
 
       visit root_path
 
@@ -34,7 +36,7 @@ describe "report" do
     end
 
     it "displays error messages" do
-      message = t("submit.unsucessful")
+      message = t("flash.reports.create.error")
       expect(page).to have_content(message)
     end
   end

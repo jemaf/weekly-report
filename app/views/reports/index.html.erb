@@ -3,7 +3,15 @@
 <p><%=t("report.index.step_one") %></p>
 <p><%=t("report.index.step_two") %></p>
 
-<%= simple_form_for(@report) do |form|%>
+
+   <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="error"><%= flash[:error] %></p>
+    <% end %>
+
+<%= simple_form_for @report, :url => reports_path do |form|%>
   <%= form.input :name, label: t("form.name") %>
   <%= form.input :current_activities, 
     label: t("form.current_activities"),

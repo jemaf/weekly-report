@@ -24,3 +24,9 @@ pt-BR:
         Passo 2: Toda segunda de manhã (~11:00), os relatórios de todos os estudantes 
         serão enviados "automaticamente" para todos os membros do grupo de pesquisa 
         (inclusive para o Marco Túlio).
+
+  flash:
+    reports:
+      create:
+        notice: "Relatório enviado com sucesso."
+        error: "Algo deu errado."

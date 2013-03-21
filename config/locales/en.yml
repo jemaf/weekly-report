@@ -25,3 +25,9 @@ en:
       step_two: | 
         Every Monday, the reports of all students will be student
         automatically to ASERG mailist.
+
+  flash:
+    reports:
+      create:
+        notice: "Report sent."
+        error: "Something got wrong."
