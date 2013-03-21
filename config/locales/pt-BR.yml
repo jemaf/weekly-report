@@ -3,3 +3,7 @@ pt-BR:
     name: "Nome"
     current_activities: "Atividades dessa semana"
     next_activities: "Atividades da próxima semana"
+
+  errors:
+    messages:
+      blank: "Não pode ficar em branco"

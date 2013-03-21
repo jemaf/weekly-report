@@ -3,3 +3,7 @@ en:
     name: "Name"
     current_activities: "Week activities"
     next_activities: "Next activities"
+
+  errors:
+    messages:
+      blank: "cannot be empty"
