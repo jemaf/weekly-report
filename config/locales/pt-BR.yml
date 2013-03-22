@@ -37,3 +37,7 @@ pt-BR:
       create:
         notice: "Relatório enviado com sucesso."
         error: "Algo deu errado."
+
+  report_mailer:
+    weekly_report:
+      subject: "Relatório semanal de atividades: %{week}"

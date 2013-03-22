@@ -12,12 +12,10 @@ en:
         next_activities_tip: "Plans for next week"
         current_activities_tip: "What have been done this week"
 
-
   helpers:
     submit:
       report:
         create: "Submit"
-
 
   errors:
     messages:
@@ -38,3 +36,7 @@ en:
       create:
         notice: "Report sent."
         error: "Something got wrong."
+
+  report_mailer:
+    weekly_report:
+      subject: "Weekly report: %{week}"

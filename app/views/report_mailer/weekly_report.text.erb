@@ -1,0 +1,19 @@
+ReportMailer#weekly_report
+
+<%=t("report_mailer.weekly_report.subject", 
+  :week => @last_week_date + " - " + @current_date)%>
+=============================================================
+
+<% @reports.each do |report| %>
+  
+  <%=report.name %>
+
+  <%=report.current_activities%>
+
+  <%if report.next_activities != nil %>
+    <%=report.next_activities %>
+  <%end%>
+
+<%end%>
+
+
