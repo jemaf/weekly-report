@@ -7,11 +7,11 @@ class ReportsController < ApplicationController
     @report = Report.new(params[:report])
 
     if @report.save
-      redirect_to reports_path,
-        :notice => t("flash.reports.create.notice")
+      flash[:notice] = t("flash.reports.create.notice")
+      redirect_to reports_path
     else
       flash[:error] = t("flash.reports.create.error")
-      redirect_to reports_path
+      render :index
     end
   end
 end

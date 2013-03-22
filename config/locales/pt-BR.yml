@@ -19,7 +19,7 @@ pt-BR:
 
   errors:
     messages:
-      blank: "Não pode ficar em branco"
+      blank: "é obrigatório"
 
   report:
     index:
