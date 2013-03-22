@@ -7,9 +7,9 @@ describe "report" do
 
       visit root_path
 
-      fill_in t("form.name"), with: @report.name
-      fill_in t("form.current_activities"), with: @report.current_activities
-      fill_in t("form.next_activities"), with: @report.next_activities
+      fill_in t("activerecord.attributes.report.name"), with: @report.name
+      fill_in t("activerecord.attributes.report.current_activities"), with: @report.current_activities
+      fill_in t("activerecord.attributes.report.next_activities"), with: @report.next_activities
 
       click_button t("helpers.submit.report.create")
     end
@@ -20,7 +20,7 @@ describe "report" do
     end
   end
 
-  context "submit unsucessful" do
+  context "submit unsuccessful" do
     before do
       @report = FactoryGirl.build(:report)
       @report.name = nil;
@@ -28,9 +28,9 @@ describe "report" do
 
       visit root_path
 
-      fill_in t("form.name"), with: @report.name
-      fill_in t("form.current_activities"), with: @report.current_activities
-      fill_in t("form.next_activities"), with: @report.next_activities
+      fill_in t("activerecord.attributes.report.name"), with: @report.name
+      fill_in t("activerecord.attributes.report.current_activities"), with: @report.current_activities
+      fill_in t("activerecord.attributes.report.next_activities"), with: @report.next_activities
 
       click_button t("helpers.submit.report.create")
     end

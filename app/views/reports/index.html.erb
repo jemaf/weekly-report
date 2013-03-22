@@ -9,15 +9,22 @@
     <% end %>
     <% if flash[:error] %>
       <p class="error"><%= flash[:error] %></p>
+
+      <% if @report.errors.any? %>
+      <ul>
+        <% @report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+      <% end %>
+
     <% end %>
 
 <%= simple_form_for @report, :url => reports_path do |form|%>
-  <%= form.input :name, label: t("form.name") %>
+  <%= form.input :name %>
   <%= form.input :current_activities, 
-    label: t("form.current_activities"),
-    hint: t("form.current_activities_tip") %>
+    hint: t("view.report.index.current_activities_tip") %>
   <%= form.input :next_activities, 
-    label: t("form.next_activities"),
-    hint: t("form.next_activities_tip") %>
+    hint: t("view.report.index.next_activities_tip") %>
   <%= form.submit %>
 <% end %>
