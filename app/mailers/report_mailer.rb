@@ -5,11 +5,12 @@ class ReportMailer < ActionMailer::Base
     @last_week_date = (DateTime.current().to_date() - 7.days).to_s
     @current_date = DateTime.current().to_date().to_s
 
-    @reports = Report.where( 
-      :created_at => @last_week_date.to_date .. @current_date.to_date)
+    @reports = Report.where(:created_at => @last_week_date.to_date .. 
+      (@current_date.to_date + 1.days))
 
-    mail to: "edumontandon@gmail.com", 
-      :subject => t("report_mailer.weekly_report.subject", 
+    @report_title = t("report_mailer.weekly_report.subject", 
         :week => @last_week_date + " - " + @current_date)
+
+    mail to: "edumontandon@gmail.com", :subject => @report_title
   end
 end
