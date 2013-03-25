@@ -41,3 +41,8 @@ pt-BR:
   report_mailer:
     weekly_report:
       subject: "Relatório semanal de atividades: %{week}"
+    weekly_report_remainder:
+      subject: "Relatório semanal de atividades: Lembrete"
+      body: |
+        Só para vocês não esquecerem de preencherem 
+        (até toda sexta-feira no final do dia). 

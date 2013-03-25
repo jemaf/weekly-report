@@ -1,5 +1,5 @@
 class ReportMailer < ActionMailer::Base
-  default from: "edumontandon@gmail.com"
+  default from: "aserg_ufmg@googlegroups.com"
 
   def weekly_report
     @last_week_date = (DateTime.current().to_date() - 7.days).to_s
@@ -11,6 +11,11 @@ class ReportMailer < ActionMailer::Base
     @report_title = t("report_mailer.weekly_report.subject", 
         :week => @last_week_date + " - " + @current_date)
 
-    mail to: "edumontandon@gmail.com", :subject => @report_title
+    mail to: "aserg_ufmg@googlegroups.com", :subject => @report_title
+  end
+
+  def weekly_report_remainder
+    mail to: "aserg_ufmg@googlegroups.com", 
+    :subject => t("report_mailer.weekly_report_remainder.subject")
   end
 end

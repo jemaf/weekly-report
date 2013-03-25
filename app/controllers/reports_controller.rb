@@ -14,4 +14,12 @@ class ReportsController < ApplicationController
       render :index
     end
   end
+
+  def self.weekly_report_email
+    ReportMailer.weekly_report
+  end
+
+  def self.weekly_report_remainder_email
+    ReportMailer.weekly_report_remainder
+  end
 end

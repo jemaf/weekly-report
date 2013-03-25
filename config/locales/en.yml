@@ -40,3 +40,6 @@ en:
   report_mailer:
     weekly_report:
       subject: "Weekly report: %{week}"
+    weekly_report_remainder:
+      subject: "Weekly report: remainder"
+      body: "Just to remember you do not forget to fill the report."
