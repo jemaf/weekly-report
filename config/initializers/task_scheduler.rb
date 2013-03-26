@@ -13,8 +13,3 @@ scheduler.cron '0 6 * * 5' do
   puts("Emailing weekly report remainder at #{Time.now}")
   ReportsController.weekly_report_remainder_email.deliver
 end
-
-scheduler.every "5s" do
-  puts("Emailing weekly report remainder at #{Time.now}")
-  mail = ReportsController.weekly_report_remainder_email
-end
