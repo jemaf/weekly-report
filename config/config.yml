@@ -1,0 +1,12 @@
+development:
+
+test:
+
+production:
+  email: 
+    address: "address"
+    port: "port"
+    domain: "domain.com"
+    user_name: "username"
+    password: "password"
+    authentication: "authentication"

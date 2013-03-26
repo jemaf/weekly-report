@@ -20,12 +20,12 @@ WeeklyReport::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => '<smtp address>',
-    :port                 => 587,
-    :domain               => '<your domain>',
-    :user_name            => '<username>',
-    :password             => '<password>',
-    :authentication       => 'plain',
+    :address              => APP_CONFIG['email.address'],
+    :port                 => APP_CONFIG['email.port'],
+    :domain               => APP_CONFIG['email.domain'],
+    :user_name            => APP_CONFIG['email.user_name'],
+    :password             => APP_CONFIG['email.password'],
+    :authentication       => APP_CONFIG['email.authentication'],
     :enable_starttls_auto => true  
   }
 end
