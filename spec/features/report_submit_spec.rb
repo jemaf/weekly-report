@@ -7,7 +7,7 @@ describe "report" do
 
       visit root_path
 
-      fill_in t("activerecord.attributes.report.name"), with: @report.name
+      select @report.user.name, :from => t("activerecord.attributes.report.user")
       fill_in t("activerecord.attributes.report.current_activities"), with: @report.current_activities
       fill_in t("activerecord.attributes.report.next_activities"), with: @report.next_activities
 
@@ -23,12 +23,11 @@ describe "report" do
   context "submit unsuccessful" do
     before do
       @report = FactoryGirl.build(:report)
-      @report.name = nil;
       @report.current_activities = nil
 
       visit root_path
 
-      fill_in t("activerecord.attributes.report.name"), with: @report.name
+      select @report.user.name, :from => t("activerecord.attributes.report.user")
       fill_in t("activerecord.attributes.report.current_activities"), with: @report.current_activities
       fill_in t("activerecord.attributes.report.next_activities"), with: @report.next_activities
 

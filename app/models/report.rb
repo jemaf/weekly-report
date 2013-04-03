@@ -1,5 +1,6 @@
 class Report < ActiveRecord::Base
-  attr_accessible :current_activities, :name, :next_activities
+  attr_accessible :current_activities, :next_activities, :user_id
+  validates_presence_of :current_activities, :user_id
 
-  validates_presence_of :name, :current_activities
+  belongs_to :user
 end

@@ -1,8 +1,13 @@
 FactoryGirl.define do
 
   factory :report do
-    name "John Doe"
+    user { FactoryGirl.create(:user) }
     current_activities "current activity"
     next_activities "next activity"
+  end
+
+  factory :user do
+    name "John Doe"
+    email "john@doe.com"
   end
 end

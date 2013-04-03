@@ -2,9 +2,12 @@ en:
   activerecord:
     attributes:
       report:
-        name: "Name"
+        User: "User"
         current_activities: "Week activities"
         next_activities: "Next activities"
+      user:
+        name: "Name"
+        email: "E-mail"
 
   view:
     report:
