@@ -8,7 +8,7 @@ class ReportsController < ApplicationController
 
     if @report.save
       flash[:notice] = t("flash.reports.create.notice")
-      redirect_to reports_path
+      redirect_to new_report_path
     else
       flash[:error] = t("flash.reports.create.error")
       render :index

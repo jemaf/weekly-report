@@ -5,7 +5,7 @@ describe "report" do
     before do
       @report = FactoryGirl.build(:report)
 
-      visit root_path
+      visit new_report_path
 
       select @report.user.name, :from => t("activerecord.attributes.report.user")
       fill_in t("activerecord.attributes.report.current_activities"), with: @report.current_activities
@@ -25,7 +25,7 @@ describe "report" do
       @report = FactoryGirl.build(:report)
       @report.current_activities = nil
 
-      visit root_path
+      visit new_report_path
 
       select @report.user.name, :from => t("activerecord.attributes.report.user")
       fill_in t("activerecord.attributes.report.current_activities"), with: @report.current_activities

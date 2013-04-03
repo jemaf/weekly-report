@@ -19,7 +19,7 @@
       <% end %>
     <% end %>
 
-<%= simple_form_for @report, :url => reports_path do |form|%>
+<%= simple_form_for @report, :url => new_report_path do |form|%>
   <%= form.association :user, include_blank: false %>
   <%= form.input :current_activities, 
     hint: t("view.report.index.current_activities_tip") %>
