@@ -43,6 +43,10 @@ pt-BR:
       description: |
         Adicione um novo usuário para o preenchimento do relatório
         semanal.
+    index:
+      title: "Usuários Cadastrados"
+      description: |
+        Lista de usuários cadastrados
 
   flash:
     reports:

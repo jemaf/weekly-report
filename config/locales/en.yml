@@ -41,6 +41,10 @@ en:
       title: "New User"
       description: |
         Add a new to user to allow him to fill the weekly report.
+    index:
+      title: "Registered Users"
+      description: |
+        "List of registered users"
 
   flash:
     reports:

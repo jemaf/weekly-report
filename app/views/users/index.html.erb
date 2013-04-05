@@ -1,2 +1,12 @@
-<h1>User#index</h1>
-<p>Find me in app/views/user/index.html.erb</p>
+<h1><%= t("users.index.title") %></h1>
+
+<p><%= t("users.index.description") %></p>
+
+<table>
+  <tr><td><h3><%= t("activerecord.attributes.user.name") %><h3></td> 
+    <td><h3><%= t("activerecord.attributes.user.email") %><h3></td></tr>
+
+    <% @users.each do |user| %>
+    <tr><td><%= user.name %></td> <td><%= user.email%></td></tr>
+    <% end %>
+</table>
