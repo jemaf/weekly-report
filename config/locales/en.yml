@@ -19,6 +19,8 @@ en:
     submit:
       report:
         create: "Submit"
+      user:
+        create: "Submit"
 
   errors:
     messages:
@@ -34,11 +36,21 @@ en:
         Every Monday, the reports of all students will be student
         automatically to ASERG mailist.
 
+  users:
+    new:
+      title: "New User"
+      description: |
+        Add a new to user to allow him to fill the weekly report.
+
   flash:
     reports:
       create:
         notice: "Report sent."
         error: "Something got wrong."
+    users:
+      create:
+        notice: "User created successfully."
+        error: "Something got wrong."        
 
   report_mailer:
     weekly_report:

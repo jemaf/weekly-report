@@ -19,6 +19,8 @@ pt-BR:
     submit:
       report:
         create: "Enviar"
+      user:
+        create: "Cadastrar"
 
   errors:
     messages:
@@ -35,10 +37,21 @@ pt-BR:
         serão enviados automaticamente para todos os membros do grupo de pesquisa 
         (inclusive para o Marco Túlio).
 
+  users:
+    new:
+      title: "Adicionar Novo Usuário"
+      description: |
+        Adicione um novo usuário para o preenchimento do relatório
+        semanal.
+
   flash:
     reports:
       create:
         notice: "Relatório enviado com sucesso."
+        error: "Algo deu errado."
+    users:
+      create:
+        notice: "Usuário criado com sucesso."
         error: "Algo deu errado."
 
   report_mailer:

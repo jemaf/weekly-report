@@ -1,0 +1,24 @@
+<h1><%= t("users.new.title") %></h1>
+
+<p><%= t("users.new.description") %></p>
+
+   <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="error"><%= flash[:error] %></p>
+
+      <% if @user.errors.any? %>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    <% end %>
+
+<%= simple_form_for @user, :url => new_user_path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.submit%>
+<% end %>
