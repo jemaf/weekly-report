@@ -59,6 +59,13 @@ en:
   report_mailer:
     weekly_report:
       subject: "Weekly report: %{week}"
+      empty: "No activities reported"
     weekly_report_remainder:
       subject: "Weekly report: remainder"
       body: "Just to remember you do not forget to fill the report."
+    weekly_report_last_remainder:
+      subject: "Weekly report: last remainder"
+      body: |
+        Hi,
+        You did not reported your weekly activities yet. 
+        You do not want me to do it for you isn't it?? :)

@@ -4,9 +4,7 @@ class ReportMailer < ActionMailer::Base
   def weekly_report
     @last_week_date = (DateTime.current().to_date() - 7.days).to_s
     @current_date = DateTime.current().to_date().to_s
-
-    @reports = Report.where(:created_at => @last_week_date.to_date .. 
-      (@current_date.to_date + 1.days))
+    @users = User.all
 
     @report_title = t("report_mailer.weekly_report.subject", 
         :week => @last_week_date + " - " + @current_date)
@@ -17,5 +15,16 @@ class ReportMailer < ActionMailer::Base
   def weekly_report_remainder
     mail to: "aserg_ufmg@googlegroups.com", 
     :subject => t("report_mailer.weekly_report_remainder.subject")
+  end
+
+  def weekly_report_last_remainder
+    users = User.all
+
+    users.each do |user|
+      if user.weekly_report == nil
+        mail to: user.email, 
+        :subject => t("report_mailer.weekly_report_last_remainder.subject") 
+      end
+    end
   end
 end

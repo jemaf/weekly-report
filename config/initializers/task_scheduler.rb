@@ -13,3 +13,9 @@ scheduler.cron '0 6 * * 5' do
   puts("Emailing weekly report remainder at #{Time.now}")
   ReportsController.weekly_report_remainder_email.deliver
 end
+
+#every monday at 6am
+scheduler.cron '0 6 * * 1' do
+  puts("Emailing last weekly report remainder at #{Time.now}")
+  ReportsController.weekly_report_last_remainder_email.deliver
+end

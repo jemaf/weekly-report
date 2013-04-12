@@ -6,14 +6,24 @@
 
   <h1><%= @report_title %></h1>
 
-  <% @reports.each do |report| %>
+  <% @users.each do |user| %>
     <div>
-      <h2><%=report.name%></h2>
+      <h2><%=user.name%></h2>
       <h3><%=t("activerecord.attributes.report.current_activities")%></h3>
-      <p><%=simple_format(report.current_activities)%></p>
-      <% if report.next_activities != nil %>
+
+      <% if user.weekly_report != nil %>
+        <p><%=simple_format(user.weekly_report.current_activities)%></p>
+      <% else %>
+        <%=t("report_mailer.weekly_report.empty") %>
+      <% end %>
+      
+      <% if user.weekly_report != nil && user.weekly_report.next_activities != nil %>
         <h3><%=t("activerecord.attributes.report.next_activities")%></h3>
-        <p><%=simple_format(report.next_activities)%></p>
+        <% if user.weekly_report != nil %>
+          <p><%=simple_format(user.weekly_report.next_activities)%></p>
+        <% else %>
+          <%=t("report_mailer.weekly_report.empty") %>
+        <% end %>
       <% end %>
     </div>
   <% end %>

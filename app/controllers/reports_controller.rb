@@ -22,4 +22,8 @@ class ReportsController < ApplicationController
   def self.weekly_report_remainder_email
     ReportMailer.weekly_report_remainder
   end
+
+  def self.weekly_report_last_remainder_email
+    ReportMailer.weekly_report_last_remainder
+  end
 end

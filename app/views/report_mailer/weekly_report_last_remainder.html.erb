@@ -1,0 +1,13 @@
+<<html>
+<head>
+  
+</head>
+<body> 
+<p><%= t("report_mailer.weekly_report_last_remainder.body")%></p>
+
+<% if @remainder_link != nil %>
+  <p><a href="<%=@remainder_link%>"><%=@remainder_link%></a></p>
+<% end %>
+
+</body>
+</html>

@@ -1,17 +1,27 @@
 <%=@report_title%>
 ===================================================
 
-<% @reports.each do |report| %>
+<% @users.each do |user| %>
   
-  <%=t("activerecord.attributes.report.name")%>: <%=report.name %>
+  <%=t("activerecord.attributes.user.name")%>: <%=user.name %>
 
-  <%=t("activerecord.attributes.report.current_activities")%>: <%=report.current_activities%>
+  <%=t("activerecord.attributes.report.current_activities")%>: 
+  <% if user.weekly_report != nil %>
+  <%=user.weekly_report.current_activities%>
+  <% else %>
+  <%=t("report_mailer.weekly_report.empty") %>
+  <% end %>
 
-  <%if report.next_activities != nil %>
-  <%=t("activerecord.attributes.report.next_activities")%>: <%=report.next_activities %>
-  <%end%>
+  <%if user.weekly_report != nil && user.weekly_report.next_activities != nil %>
+  <%=t("activerecord.attributes.report.next_activities")%>:
+  <% if user.weekly_report != nil %>
+  <%=user.weekly_report.next_activities%>
+  <% else %>
+  <%=t("report_mailer.weekly_report.empty") %>
+  <% end %>
+  <% end %>
 
 ..................................................
-<%end%>
+<% end %>
 
 
