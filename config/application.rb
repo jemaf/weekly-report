@@ -22,3 +22,6 @@ module WeeklyReport
     config.assets.version = '1.0'
   end
 end
+
+#configuration file
+APP_CONFIG = YAML.load_file("#{::Rails.root}/config/load_config.yml")[::Rails.env]

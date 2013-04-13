@@ -14,6 +14,7 @@ en:
       index:
         next_activities_tip: "Plans for next week"
         current_activities_tip: "What have been done this week"
+        sign_up: "Sign up"
 
   helpers:
     submit:

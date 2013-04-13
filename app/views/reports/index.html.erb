@@ -20,7 +20,8 @@
     <% end %>
 
 <%= simple_form_for @report, :url => new_report_path do |form|%>
-  <%= form.association :user, include_blank: false %>
+  <%= form.association :user, include_blank: false %> 
+  <%= link_to t("view.report.index.sign_up"), new_user_path %>
   <%= form.input :current_activities, 
     hint: t("view.report.index.current_activities_tip") %>
   <%= form.input :next_activities, 

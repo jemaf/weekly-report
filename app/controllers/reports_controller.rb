@@ -15,15 +15,22 @@ class ReportsController < ApplicationController
     end
   end
 
-  def self.weekly_report_email
-    ReportMailer.weekly_report
+  def self.weekly_report
+    ReportMailer.weekly_report.deliver
   end
 
-  def self.weekly_report_remainder_email
-    ReportMailer.weekly_report_remainder
+  def self.weekly_report_remainder
+    ReportMailer.weekly_report_remainder.deliver
   end
 
-  def self.weekly_report_last_remainder_email
-    ReportMailer.weekly_report_last_remainder
+  def self.weekly_report_last_remainder
+    users = User.all
+    emails = Array.new
+
+    users.each do |user|
+      if user.weekly_report == nil
+        ReportMailer.weekly_report_last_remainder(user).deliver
+      end
+    end
   end
 end

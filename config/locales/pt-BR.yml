@@ -14,6 +14,7 @@ pt-BR:
       index:
         next_activities_tip: "O que planeja-se realizar na próxima semana"
         current_activities_tip: "O que foi realizado nesta semana"
+        sign_up: "Me cadastrar"
 
   helpers:
     submit:
