@@ -4,7 +4,6 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 gem 'rufus-scheduler'
 gem 'simple_form'
-gem 'twitter-bootstrap-rails'
 gem "mail_view"
 
 group :assets do
@@ -12,8 +11,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'twitter-bootstrap-rails'
 end
 
 group :development do
