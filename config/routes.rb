@@ -9,6 +9,7 @@ WeeklyReport::Application.routes.draw do
 
   post "/", :to => "reports#create", :as => :new_report
   get "/", :to => "reports#index", :as => false
+  get "/reports/new", :to => "reports#index", :as => false
 
   root :to => "reports#index"
 

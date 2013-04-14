@@ -10,15 +10,4 @@ WeeklyReport::Application.configure do
   config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.assets.compress = false
   config.assets.debug = true
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address              => APP_CONFIG['email']['address'],
-    :port                 => APP_CONFIG['email']['port'],
-    :domain               => APP_CONFIG['email']['domain'],
-    :user_name            => APP_CONFIG['email']['user_name'],
-    :password             => APP_CONFIG['email']['password'],
-    :authentication       => APP_CONFIG['email']['authentication'],
-    :enable_starttls_auto => true  
-  }
 end

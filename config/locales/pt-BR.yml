@@ -48,6 +48,7 @@ pt-BR:
       title: "Usuários Cadastrados"
       description: |
         Lista de usuários cadastrados
+      new_user: "Cadastrar"
 
   flash:
     reports:
@@ -74,3 +75,9 @@ pt-BR:
         Olá,
         Gostariámos de lembrar que você ainda não preencheu o 
         relatório semanal de atividades. É melhor se apressar. :)
+
+  application:
+    navbar:
+      title: "Relatório Semanal ASERG"
+      report: "Novo Relatório"
+      user: "Usuários Cadastrados"

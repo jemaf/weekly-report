@@ -5,11 +5,12 @@
 
 
    <% if flash[:notice] %>
-      <p class="notice"><%= flash[:notice] %></p>
+    <div class="alert alert-success">
+      <p><%= flash[:notice] %></p>
+    </div>
     <% end %>
     <% if flash[:error] %>
-      <p class="error"><%= flash[:error] %></p>
-
+    <div class="alert alert-error">
       <% if @report.errors.any? %>
       <ul>
         <% @report.errors.full_messages.each do |message| %>
@@ -17,14 +18,17 @@
         <% end %>
       </ul>
       <% end %>
+    </div>
     <% end %>
 
 <%= simple_form_for @report, :url => new_report_path do |form|%>
-  <%= form.association :user, include_blank: false %> 
-  <%= link_to t("view.report.index.sign_up"), new_user_path %>
+  <%= form.association :user, include_blank: false, 
+    hint: (link_to t("view.report.index.sign_up"), new_user_path) %>
   <%= form.input :current_activities, 
+    input_html: {:class => 'input-xxlarge' },
     hint: t("view.report.index.current_activities_tip") %>
   <%= form.input :next_activities, 
+    input_html: {:class => 'input-xxlarge' },
     hint: t("view.report.index.next_activities_tip") %>
-  <%= form.submit %>
+  <%= form.submit wrapper_html: {:class => 'btn btn-success' } %>
 <% end %>

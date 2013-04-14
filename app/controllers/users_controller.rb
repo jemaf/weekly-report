@@ -8,9 +8,9 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = t("flash.users.create.notice")
-      redirect_to new_user_path
+      redirect_to new_report_path
     else
-      flash[:error] = t("flash.users.create.error")
+      flash.now[:error] = t("flash.users.create.error")
       render :new
     end
 

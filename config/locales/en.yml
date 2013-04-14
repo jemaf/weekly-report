@@ -45,7 +45,8 @@ en:
     index:
       title: "Registered Users"
       description: |
-        "List of registered users"
+        List of registered users
+      new_user: "Add a new user"
 
   flash:
     reports:
@@ -70,3 +71,9 @@ en:
         Hi,
         You did not reported your weekly activities yet. 
         You do not want me to do it for you isn't it?? :)
+
+  application:
+    navbar:
+      title: "ASERG Weekly Report"
+      report: "Add Report"
+      user: "Users"

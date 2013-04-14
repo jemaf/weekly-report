@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <a class="brand" href="/"><%= t("application.navbar.title") %></a>
+      <ul class="nav">
+        <li class="active"><a href="/reports/new"><%= t("application.navbar.report") %></a></li>
+        <li><a href="/users"><%= t("application.navbar.user") %></a></li>
+      </ul>
+    </div>
+  </div>
 
-<%= yield %>
+  <div class="span-9"><%= yield %></div>
 
 </body>
 </html>

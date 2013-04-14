@@ -3,11 +3,12 @@
 <p><%= t("users.new.description") %></p>
 
    <% if flash[:notice] %>
-      <p class="notice"><%= flash[:notice] %></p>
+    <div class="alert alert-success">
+      <p><%= flash[:notice] %></p>
+    </div>
     <% end %>
     <% if flash[:error] %>
-      <p class="error"><%= flash[:error] %></p>
-
+    <div class="alert alert-error">
       <% if @user.errors.any? %>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
@@ -15,6 +16,7 @@
         <% end %>
       </ul>
       <% end %>
+    </div>
     <% end %>
 
 <%= simple_form_for @user, :url => new_user_path do |f| %>

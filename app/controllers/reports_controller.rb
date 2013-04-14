@@ -10,7 +10,7 @@ class ReportsController < ApplicationController
       flash[:notice] = t("flash.reports.create.notice")
       redirect_to new_report_path
     else
-      flash[:error] = t("flash.reports.create.error")
+      flash.now[:error] = t("flash.reports.create.error")
       render :index
     end
   end
