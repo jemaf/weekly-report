@@ -18,11 +18,10 @@ WeeklyReport::Application.configure do
 
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     :address              => APP_CONFIG['email']['address'],
     :port                 => APP_CONFIG['email']['port'],
-    :domain               => APP_CONFIG['email']['domain'],
+    # :domain               => APP_CONFIG['email']['domain'],
     :user_name            => APP_CONFIG['email']['user_name'],
     :password             => APP_CONFIG['email']['password'],
     :authentication       => APP_CONFIG['email']['authentication'],

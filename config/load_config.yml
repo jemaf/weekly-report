@@ -1,14 +1,16 @@
 development:
     email: 
-    website: http://dev:3000/weekly-report
+    website: 
 test:
 
 production:
     email: 
-        address: " "
+        address: ""
         port: 000
-        domain: " "
-        user_name: " "
-        password: " "
-        authentication: " "
-    website:
+        # domain: "jemaf.rhcloud.com"
+        user_name: ""
+        password: ""
+        authentication: ""
+        sender: ""
+        receiver: ""
+    website: 
