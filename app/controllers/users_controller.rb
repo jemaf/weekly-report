@@ -17,6 +17,11 @@ class UsersController < ApplicationController
   end
 
   def delete
+    @user = User.find(params[:id])
+    @user.destroy
+
+    flash[:info] = t("flash.users.delete")
+    redirect_to users_path
   end
 
   def index

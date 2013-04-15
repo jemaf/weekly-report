@@ -22,6 +22,8 @@ en:
         create: "Submit"
       user:
         create: "Submit"
+    links:
+      destroy: "Delete"
 
   errors:
     messages:
@@ -56,7 +58,8 @@ en:
     users:
       create:
         notice: "User created successfully."
-        error: "Something got wrong."        
+        error: "Something got wrong."
+      delete: "User removed successfully."        
 
   report_mailer:
     weekly_report:
