@@ -1,30 +1,33 @@
-<<html>
+<html>
 <head>
   
 </head>
 <body> 
 
-  <h1><%= @report_title %></h1>
+<!--   <h1><%= @report_title %></h1> -->
 
   <% @users.each do |user| %>
     <div>
-      <h2><%=user.name%></h2>
-      <h3><%=t("activerecord.attributes.report.current_activities")%></h3>
-
+      <b><%=user.name%></b>
+      <p>
       <% if user.weekly_report != nil %>
-        <p><%=simple_format(user.weekly_report.current_activities)%></p>
+        <%=simple_format(user.weekly_report.current_activities)%>
       <% else %>
         <%=t("report_mailer.weekly_report.empty") %>
       <% end %>
-      
+      </p>
+
       <% if user.weekly_report != nil && user.weekly_report.next_activities != nil %>
-        <h3><%=t("activerecord.attributes.report.next_activities")%></h3>
+      <p>
+        <i><%=t("activerecord.attributes.report.next_activities")%>:&nbsp;</i>
         <% if user.weekly_report != nil %>
-          <p><%=simple_format(user.weekly_report.next_activities)%></p>
+          <%=user.weekly_report.next_activities%>
         <% else %>
-          <%=t("report_mailer.weekly_report.empty") %>
+          <!-- <%=t("report_mailer.weekly_report.empty") %> -->
         <% end %>
+      </p>
       <% end %>
+      <br />
     </div>
   <% end %>
 

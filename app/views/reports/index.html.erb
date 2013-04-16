@@ -21,11 +21,11 @@
     <% end %>
 
 <%= simple_form_for @report, :url => new_report_path do |form|%>
-  <%= form.association :user, include_blank: false, 
+  <%= form.association :user, include_blank: true, 
     hint: (link_to t("view.report.index.sign_up"), new_user_path) %>
   <%= form.input :current_activities, 
-    input_html: {:class => 'input-xxlarge', :rows => '8', :maxlength => '560' } %>
+    input_html: {:class => 'input-xxlarge', :rows => '6', :maxlength => '560' } %>
   <%= form.input :next_activities, 
-    input_html: {:class => 'input-xxlarge', :rows => '8', :maxlength => '560' } %>
+    input_html: {:class => 'input-xxlarge', :rows => '6', :maxlength => '560' } %>
   <%= form.submit wrapper_html: {:class => 'btn btn-success' } %>
 <% end %>

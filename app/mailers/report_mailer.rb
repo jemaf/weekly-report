@@ -5,6 +5,7 @@ class ReportMailer < ActionMailer::Base
     @last_week_date = (DateTime.current().to_date() - 7.days).to_s
     @current_date = DateTime.current().to_date().to_s
     @users = User.all
+    @users.sort! { |a,b| a.name.downcase <=> b.name.downcase }
 
     @report_title = t("report_mailer.weekly_report.subject", 
         :week => @last_week_date + " - " + @current_date)
