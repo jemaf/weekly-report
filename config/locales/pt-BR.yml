@@ -3,7 +3,7 @@ pt-BR:
     attributes:
       report:
         user: "Usuário"
-        current_activities: "Atividades dessa semana"
+        current_activities: "Atividades desta semana"
         next_activities: "Atividades da próxima semana"
       user:
         name: "Nome"

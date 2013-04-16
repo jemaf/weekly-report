@@ -3,7 +3,6 @@
 <p><%=t("report.index.step_one") %></p>
 <p><%=t("report.index.step_two") %></p>
 
-
    <% if flash[:notice] %>
     <div class="alert alert-success">
       <p><%= flash[:notice] %></p>
@@ -25,10 +24,8 @@
   <%= form.association :user, include_blank: false, 
     hint: (link_to t("view.report.index.sign_up"), new_user_path) %>
   <%= form.input :current_activities, 
-    input_html: {:class => 'input-xxlarge' },
-    hint: t("view.report.index.current_activities_tip") %>
+    input_html: {:class => 'input-xxlarge', :rows => '8', :maxlength => '560' } %>
   <%= form.input :next_activities, 
-    input_html: {:class => 'input-xxlarge' },
-    hint: t("view.report.index.next_activities_tip") %>
+    input_html: {:class => 'input-xxlarge', :rows => '8', :maxlength => '560' } %>
   <%= form.submit wrapper_html: {:class => 'btn btn-success' } %>
 <% end %>
