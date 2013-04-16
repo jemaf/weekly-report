@@ -2,8 +2,8 @@ class ReportMailer < ActionMailer::Base
   default :from => APP_CONFIG['email']['sender']
 
   def weekly_report
-    @last_week_date = (DateTime.current().to_date() - 7.days).to_s
-    @current_date = DateTime.current().to_date().to_s
+    @last_week_date = (Time.now - 7.days).to_formatted_s(:ptbr)
+    @current_date = Time.now.to_formatted_s(:ptbr)
     @users = User.all
     @users.sort! { |a,b| a.name.downcase <=> b.name.downcase }
 

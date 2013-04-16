@@ -17,14 +17,10 @@
       <% end %>
       </p>
 
-      <% if user.weekly_report != nil && user.weekly_report.next_activities != nil %>
+      <% if user.weekly_report != nil && user.weekly_report.next_activities != "" %>
       <p>
-        <i><%=t("activerecord.attributes.report.next_activities")%>:&nbsp;</i>
-        <% if user.weekly_report != nil %>
+          <i><%=t("activerecord.attributes.report.next_activities")%>:&nbsp;</i>
           <%=user.weekly_report.next_activities%>
-        <% else %>
-          <!-- <%=t("report_mailer.weekly_report.empty") %> -->
-        <% end %>
       </p>
       <% end %>
       <br />
